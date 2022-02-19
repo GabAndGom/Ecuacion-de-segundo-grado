@@ -34,7 +34,7 @@ int main()
         {
             cout<<".";
         }
-        else 
+        if (res1!=res2) 
         {
             cout<<"las soluciones para la ecuacion son: "<<res1<<" y "<<res2<<endl;
         }
@@ -44,5 +44,5 @@ int main()
     }
 
 
-    
+
 }
