@@ -39,10 +39,6 @@ int main()
             cout<<"las soluciones para la ecuacion son: "<<res1<<" y "<<res2<<endl;
         }
         
-
-
     }
-
-
 
 }
