@@ -6,6 +6,7 @@ using namespace std;
 int main()
 {
     float A,B,C,aux1,res1=0,res2=0;
+    float xreal,ximag;
     cout<<"Digite los valores de los coeficientes (A,B,C), siendo que Ax^2+Bx+C=0"<<endl;
     cout<<"A: ";
     cin>>A;
@@ -13,32 +14,41 @@ int main()
     cin>>B;
     cout<<"C: ";
     cin>>C;
-    aux1=(pow(B,2)-4*A*C);
+    aux1=(pow(B,2)-(4*A*C));
     if (aux1<0)
     {
-        cout<<"la ecuacion no tiene solucion en los reales ";
-    }
-    if (A==0)
-    {
-        cout<<"la ecuacion no es de segundo grado";
+        cout<<"la ecuacion no tiene solucion en los reales "<<endl;
+        xreal=-B/(2*A);
+        ximag=sqrt(-aux1)/(2*A);
+        cout<<"Las soluciones imaginarias son: "<<endl;
+        cout<<xreal<<"+"<<ximag<<"i "<<endl;
+        cout<<xreal<<"-"<<ximag<<"i "<<endl;
     }
     else
     {
-        res1=(-B-(sqrt(aux1)))/(2*A);
-        res2=(-B+(sqrt(aux1)))/(2*A);
-        if (res1==res2)
-        {
-            cout<<"la solucion para la ecuacion es: "<<res1<<endl;
-        }
-        if ((aux1<0)||(A==0))
-        {
-            cout<<".";
-        }
-        if (res1!=res2) 
-        {
-            cout<<"las soluciones para la ecuacion son: "<<res1<<" y "<<res2<<endl;
-        }
+        if (A==0)
+       {
+        cout<<"la ecuacion no es de segundo grado ,la solucion es: "<<C/B;
+       }
+        else
+       {
+              res1=(-B-(sqrt(aux1)))/(2*A);
+            res2=(-B+(sqrt(aux1)))/(2*A);
+            if (res1==res2)
+            {
+                cout<<"la solucion para la ecuacion es: "<<res1<<endl;
+            }
+            if ((aux1<0)||(A==0))
+            {
+                cout<<".";
+            }
+            if (res1!=res2) 
+            {
+             cout<<"las soluciones para la ecuacion son: "<<res1<<" y "<<res2<<endl;
+            }
         
+        }
     }
+    
 
 }
