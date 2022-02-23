@@ -35,7 +35,7 @@ int main()
         {
             if (aux1==0)
             {
-                cout<<"la solucion para la ecuacion es: "<<B/(2*A)<<endl;
+                cout<<"la solucion para la ecuacion es: "<<-B/(2*A)<<endl;
             }
             else 
             {
